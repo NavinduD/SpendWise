@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Sign Up</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+	<nav>
+		<ul>
+			<li class="logo"><a href="#"><img src="Images/toolbar-logo.png" alt="Logo"></a></li>
+		</ul>
+	</nav>
+	<div class="container">
+		<h1>Sign Up</h1>
+		<form id="signup-form">
+			<label for="firstName">First Name:</label>
+			<input type="text" id="firstName" name="firstName" required>
+
+			<label for="lastName">Last Name:</label>
+			<input type="text" id="lastName" name="lastName" required>
+
+			<label for="email">Email:</label>
+			<input type="email" id="email" name="email" required>
+
+			<label for="password">Password:</label>
+			<input type="password" id="password" name="password" required>
+
+			<button type="submit" id="signUpBtn">Sign Up</button>
+		</form>
+	</div>
+	<!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-app.js"></script>
+
+    <!-- Add Firebase products that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-firestore.js"></script>
+	<script src="firebase.js"></script>
+</body>
+
+</html>
