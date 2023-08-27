@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Spend Wise Home Page</title>
+  <link rel="stylesheet" type="text/css" href="home.css">
+</head>
+
+<body>
+  <header>
+    <nav class="nav">
+      <ul>
+        <ul>
+          <li> <a href="#" class="logo"><img src="Images/toolbar-logo.png" alt="Logo"></a></li>
+        </ul>
+        <ul>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </ul>
+      <div id="user-info" class="clickable-text">
+        Hi, <span id="user-first-name"></span>
+      </div>
+      <div class="slide-down">
+        <button id="signOutButton">Sign Out</button>
+      </div>
+    </nav>
+  </header>
+  <nav>
+    <ul class="center">
+      <b class="underline"><a href="home.html" class="padding">Budget Calculator</a></b>
+      <b class="underline"><a onclick="" class="padding">Expenses Tracker</a></b>
+      <b class="underline"><a href="Questionnare.html" class="padding">Tips for Save</a></b>
+    </ul>
+  </nav>
+  <div class="content">
+    <table>
+      <tr>
+        <th>Monthly Income: </th>
+        <td><span id="monthly-income" style="color: #f7e060;"></span></td>
+        <td><input id="incomeUpdate" placeholder="Rs." type="number"></input> <button type="submit"
+            id="inUpbtn">Update</button></td>
+      </tr>
+      <tr>
+        <th>How much want to save: <tab></tab>
+        </th>
+        <td><span id="savings" style="color: #f7e060;"></span></td>
+        <td><input id="saveUpdate" placeholder="Rs." type="number"></input> <button type="submit"
+            id="saveUpbtn">Update</button></td>
+      </tr>
+      <tr>
+        <th>Daily Expenses: </th>
+        <td><span id="daily-expenses" style="color: #d52c2c;"></span></td>
+      </tr>
+
+    </table>
+    <div style="height: 50px;"></div>
+    <form id="add-expense-form">
+      <div style="height: 20px;"></div>
+      <input type="number" id="expense-amount" placeholder="Enter amount spent">
+      <button type="submit">Add Expense</button>
+      <div style="height: 20px;"></div>
+    </form>
+  <div id="chart"></div>
+  
+  </div>
+
+  <footer>
+    <p class="center">&copy; 2023 Spend Wise. All rights reserved.</p>
+  </footer>
+  <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-database.js"></script>
+  <script src="usename.js"></script>
+  <script src="dailyExpenses.js"></script>
+  <script src="linechart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://code.highcharts.com/highcharts.js"></script>
+  <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+</body>
+
+</html>

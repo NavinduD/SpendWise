@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Spend Wise Home Page</title>
+  <link rel="stylesheet" type="text/css" href="home.css">
+</head>
+
+<body>
+  <header>
+    <nav class="nav">
+      <ul>
+        <ul>
+          <li> <a href="#" class="logo"><img src="Images/toolbar-logo.png" alt="Logo"></a></li>
+        </ul>
+        <ul>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </ul>
+      <div id="user-info" class="clickable-text">
+        Hi, <span id="user-first-name"></span>
+      </div>
+      <div class="slide-down">
+        <button id="signOutButton">Sign Out</button>
+      </div>
+    </nav>
+  </header>
+  <nav>
+    <ul class="center">
+      <b class="underline"><a id="scroll-btn" class="padding">Budget Calculator</a></b>
+      <b class="underline"><a href="expensestracker.html" class="padding">Expenses Tracker</a></b>
+      <b class="underline"><a href="Questionnare.html" class="padding">Tips for Save</a></b>
+    </ul>
+  </nav>
+  <div>
+    <h1>Welcome to Spend Wise!</h1>
+    <p>Spend Wise is a comprehensive personal finance website designed to help you manage your money effectively. It
+      offers a variety of tools and resources to help you budget your income, track your expenses, and save money.</p>
+    <p>With the budget calculator, you can easily create a budget plan that suits your lifestyle and financial goals.
+      You can set spending limits for various categories such as groceries, utilities, transportation, and
+      entertainment, and track your actual spending against your budget. This feature helps you stay on top of your
+      finances and avoid overspending.</p>
+    <p>The expenses tracker allows you to keep track of all your transactions in one place. You can categorize your
+      expenses and view reports to understand where your money is going. This information helps you identify areas where
+      you can cut back on spending and save money.</p>
+    <p>In addition to the budget calculator and expenses tracker, Spend Wise also provides tips for saving money and
+      side hustles. These tips can help you reduce your expenses and increase your income, so you can reach your
+      financial goals faster.</p>
+    <p>Overall, Spend Wise is an excellent resource for anyone looking to manage their money better. With its
+      easy-to-use tools and helpful tips, you can take control of your finances and achieve financial freedom.</p>
+    <p></p>
+    <p><button id="scroll-btn2" class="button">Calculate Budget</button></p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+  </div>
+  <div class="content">
+    <h1 id="scroll-point">Monthly Budget Calculator</h1>
+    <form id="myForm">
+      <p></p>
+      <div>
+        <label for="income">Monthly Income (Rs.):</label>
+        <input type="number" class="input" id="income" name="income" min="0" step="0.01" required>
+      </div>
+      <div>
+        <label for="house">Housing Expenses (Rs.):</label>
+        <input type="number" class="input" id="house" name="house" min="0" step="0.01" required>
+      </div>
+      <div>
+        <label for="food">Food Expenses (Rs.):</label>
+        <input type="number" class="input" id="food" name="food" min="0" step="0.01" required>
+      </div>
+      <div>
+        <label for="transportation">Transportation Expenses (Rs.):</label>
+        <input type="number" class="input" id="transportation" name="transportation" min="0" step="0.01" required>
+      </div>
+      <div>
+        <label for="health">Health Care Expenses (Rs.):</label>
+        <input type="number" class="input" id="health" name="health" min="0" step="0.01" required>
+      </div>
+      <div>
+        <label for="debt">Debt Payments (Rs.):</label>
+        <input type="number" class="input" id="debt" name="debt" min="0" step="0.01" required>
+      </div>
+      <div>
+        <label for="taxes">Taxes (Rs.):</label>
+        <input type="number" class="input" id="taxes" name="taxes" min="0" step="0.01" required>
+      </div>
+      <div>
+        <label for="savings">Want to Save (Rs.):</label>
+        <input type="number" class="input" id="savings" name="savings" min="0" step="0.01" required>
+      </div>
+      <p></p>
+      <p></p>
+      <p></p>
+      <div class="padding">
+        <button type="button" class="input" id="calculate-btn" class="center" onclick="checkForm()">Calculate</button>
+      </div>
+    </form>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <div id="results" class="hidden">
+    </div>
+    <div class="pieAppear">
+      <canvas id="pieChart"></canvas>
+    </div>
+    
+    <div id="qbtn" class="appear">
+      <p class="center "><a class="q" href="Questionnare.html">Questionnare</a></p>
+    </div>
+    <script src="cal.js"></script>
+  </div>
+  <footer>
+    <p class="center">&copy; 2023 Spend Wise. All rights reserved.</p>
+  </footer>
+  <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-firestore.js"></script>
+  <script src="usename.js"></script>
+  <script src="slidedown.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Tip to Save</title>
+    <link rel="stylesheet" type="text/css" href="home.css">
+</head>
+
+<body>
+    <header>
+        <nav class="nav">
+            <ul>
+                <ul>
+                    <li> <a href="#" class="logo"><img src="Images/toolbar-logo.png" alt="Logo"></a></li>
+                </ul>
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </ul>
+            <div id="user-info" class="clickable-text">
+                Hi, <span id="user-first-name"></span>
+            </div>
+            <div class="slide-down">
+                <button id="signOutButton">Sign Out</button>
+            </div>
+        </nav>
+    </header>
+    <nav>
+        <ul class="center">
+            <b class="underline"><a href="home.html" class="padding">Budget Calculator</a></b>
+            <b class="underline"><a href="expensestracker.html" class="padding">Expenses Tracker</a></b>
+            <b class="underline"><a onclick="" class="padding">Tips for Save</a></b>
+        </ul>
+    </nav>
+    <div id="form-container">
+        <form action="/submit-form" method="POST" class="quest" id="wealth-form">
+            <h1>Financial Survey</h1>
+            <fieldset>
+                <legend>Question 1: What is your annual income?</legend>
+                <label class="lwith"><input type="radio" name="q1" value="1">Less than Rs. 500,000</label><br>
+                <label class="lwith"><input type="radio" name="q1" value="2">Rs. 500,000 - Rs. 1,000,000</label><br>
+                <label class="lwith"><input type="radio" name="q1" value="3">Rs. 1,000,000 - Rs. 2,500,000</label><br>
+                <label class="lwith"><input type="radio" name="q1" value="4">Rs. 2,500,000 - Rs. 5,000,000</label><br>
+                <label class="lwith"><input type="radio" name="q1" value="5">More than Rs. 5,000,000</label><br>
+            </fieldset>
+            <fieldset>
+                <legend>Question 2: How much do you have in savings?</legend>
+                <label class="lwith"><input type="radio" name="q2" value="1">Less than Rs. 100,000</label><br>
+                <label class="lwith"><input type="radio" name="q2" value="2">Rs. 100,000 - Rs. 500,000</label><br>
+                <label class="lwith"><input type="radio" name="q2" value="3">Rs. 500,000 - Rs. 1,000,000</label><br>
+                <label class="lwith"><input type="radio" name="q2" value="4">Rs. 1,000,000 - Rs. 2,500,000</label><br>
+                <label class="lwith"><input type="radio" name="q2" value="5">More than Rs. 2,500,000</label><br>
+            </fieldset>
+            <fieldset>
+                <legend>Question 3: What is the approximate value of your investments (e.g., stocks, bonds, mutual
+                    funds)?</legend>
+                <label class="lwith"><input type="radio" name="q3" value="1">Less than Rs. 250,000</label><br>
+                <label class="lwith"><input type="radio" name="q3" value="2">Rs. 250,000 - Rs. 500,000</label><br>
+                <label class="lwith"><input type="radio" name="q3" value="3">Rs. 500,000 - Rs. 1,000,000</label><br>
+                <label class="lwith"><input type="radio" name="q3" value="4">Rs. 1,000,000 - Rs. 2,500,000</label><br>
+                <label class="lwith"><input type="radio" name="q3" value="5">More than Rs. 25,00,000</label><br>
+            </fieldset>
+            <fieldset>
+                <legend>Question 4: Do you own any real estate?</legend>
+                <label class="lwith"><input type="radio" name="q4" value="0">No</label><br>
+                <label class="lwith"><input type="radio" name="q4" value="1">Yes, my primary residence</label><br>
+                <label class="lwith"><input type="radio" name="q4" value="2">Yes, one investment property</label><br>
+                <label class="lwith"><input type="radio" name="q4" value="3">Yes, two investment properties</label><br>
+                <label class="lwith"><input type="radio" name="q4" value="4">Yes, three or more investment
+                    properties</label><br>
+            </fieldset>
+            <fieldset>
+                <legend>Question 5: What is the approximate value of your real estate holdings?</legend>
+                <label class="lwith"><input type="radio" name="q5" value="0">Less than Rs. 2,500,000</label><br>
+                <label class="lwith"><input type="radio" name="q5" value="1">Rs. 2,500,000 - Rs. 5,000,000</label><br>
+                <label class="lwith"><input type="radio" name="q5" value="2">Rs. 5,000,000 - Rs. 10,000,000</label><br>
+                <label class="lwith"><input type="radio" name="q5" value="3">Rs. 10,000,000 - Rs. 25,000,000</label><br>
+                <label class="lwith"><input type="radio" name="q5" value="4">More than Rs. 25,000,000</label><br>
+            </fieldset>
+            <fieldset>
+                <legend>Question 6: Do you own any luxury items, such as a high-end car, yacht, or private jet?</legend>
+                <label class="lwith"><input type="radio" name="q6" value="0">No</label><br>
+                <label class="lwith"><input type="radio" name="q6" value="1">Yes, one luxury item</label><br>
+                <label class="lwith"><input type="radio" name="q6" value="2">Yes, two luxury items</label><br>
+                <label class="lwith"><input type="radio" name="q6" value="3">Yes, three luxury items</label><br>
+                <label class="lwith"><input type="radio" name="q6" value="4">Yes, more than three luxury
+                    items</label><br>
+            </fieldset>
+            <fieldset>
+                <legend>Question 7: How much do you spend on vacations each year?</legend>
+                <label class="lwith"><input type="radio" name="q7" value="1">Less than Rs. 50,000</label><br>
+                <label class="lwith"><input type="radio" name="q7" value="2">Rs. 50,000 - Rs. 1,00,000</label><br>
+                <label class="lwith"><input type="radio" name="q7" value="3">Rs. 100,000 - Rs. 250,000</label><br>
+                <label class="lwith"><input type="radio" name="q7" value="4">Rs. 250,000 - Rs. 500,000</label><br>
+                <label class="lwith"><input type="radio" name="q7" value="5">More than Rs. 500,000</label><br>
+            </fieldset>
+            <fieldset>
+                <legend>Question 8: How much do you spend on dining out each month?</legend>
+                <label class="lwith"><input type="radio" name="q8" value="1">Less than Rs. 10,000</label><br>
+                <label class="lwith"><input type="radio" name="q8" value="2">Rs. 10,000 - Rs. 20,000</label><br>
+                <label class="lwith"><input type="radio" name="q8" value="3">Rs. 20,000 - Rs. 50,000</label><br>
+                <label class="lwith"><input type="radio" name="q8" value="4">Rs. 50,000 - Rs. 100,000</label><br>
+                <label class="lwith"><input type="radio" name="q8" value="5">More than Rs. 100,000</label><br>
+            </fieldset>
+            <fieldset>
+                <legend>Question 9: What is the approximate value of your art collection?</legend>
+                <label class="lwith"><input type="radio" name="q9" value="0">Less than Rs. 100,000</label><br>
+                <label class="lwith"><input type="radio" name="q9" value="1">Rs. 100,000 - Rs. 250,000</label><br>
+                <label class="lwith"><input type="radio" name="q9" value="2">Rs. 250,000 - Rs. 500,000</label><br>
+                <label class="lwith"><input type="radio" name="q9" value="3">Rs. 500,000 - Rs. 1,000,000</label><br>
+                <label class="lwith"><input type="radio" name="q9" value="4">More than Rs. 1,000,000</label><br>
+            </fieldset>
+            <fieldset>
+                <legend>Question 10: How much do you donate to charity each year?</legend>
+                <label class="lwith"><input type="radio" name="q10" value="1">Less than Rs. 5,000</label><br>
+                <label class="lwith"><input type="radio" name="q10" value="2">Rs. 5,000 - Rs. 10,000</label><br>
+                <label class="lwith"><input type="radio" name="q10" value="3">Rs. 10,000 - Rs. 25,000</label><br>
+                <label class="lwith"><input type="radio" name="q10" value="4">Rs. 25,000 - Rs. 50,000</label><br>
+                <label class="lwith"><input type="radio" name="q10" value="5">More than Rs. 50,000</label><br>
+            </fieldset>
+            <p></p>
+            <button type="submit" id="submit-btn">Submit</button>
+            <p></p>
+        </form>
+    </div>
+    <div id="result-container" style="display:none;" class="content">
+        <p id="result" style="font-size: 25px;"></p>
+        <p></p>
+        <p style="text-decoration: underline;">HERE IS SOME TIPS FOR YOU...</p>
+        <p id="suggestion" style="font-weight: bold; text-align: justify; font-size: 25px; color:#112D4E;"></p>
+        <p></p>
+        <div><ol id="budget-steps"></ol></div>
+        <p></p>
+        <p id="suggestion2" style="font-weight: bold; text-align: justify; font-size: 25px; color:#112D4E;"></p>
+        <p></p>
+        <div><ol id="earnTips"></ol></div>
+        <p></p>
+        <div><button id="retry" class="button">Check the pogress</button></div>
+    </div>
+
+    <footer>
+        <p class="center">&copy; 2023 Spend Wise. All rights reserved.</p>
+    </footer>
+    <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-firestore.js"></script>
+    <script src="usename.js"></script>
+    <script src="retry.js"></script>
+    <script src="questionspoints.js"></script>
+    <script src="ifanswered.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</body>
