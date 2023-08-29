@@ -64,6 +64,8 @@ addExpenseForm.addEventListener('submit', function (event) {
       [currentDay]: expenseAmount,
     }).then(function () {
       console.log("Updated doc");
+    
+      location.reload();
     }).catch(function (error) {
       console.error("Error updating to user document: ", error);
     })
